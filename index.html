@@ -1,55 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>RunCode</title>
 	<script src="lib/codemirror.js"></script>
 	<link rel="stylesheet" href="lib/codemirror.css">
+	<link rel="stylesheet" href="lib/index.css">
+	<script src="mode/xml/xml.js"></script>
+	<script src="mode/css/css.js"></script>
 	<script src="mode/javascript/javascript.js"></script>
-	<script src="mode/htmlmixed/htmlmixed.js"></script>
-	<title>Document</title>
 </head>
 <body>
-	<form>
-		<textarea id="code" name="code">
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-<body>
-	<div class="fortext" id="text">
-		<h1>测试使用</h1>
-		<h1>
-			测试使用留着
-			<div class="keepme">TETEQU</div>
-		</h1>
-		<h1>
-			测试使用丢了
-			<div class="dropme">SUSUSUS</div>
-		</h1>
-		<h1 id="ddd">测试使用</h1>
-		<h2>阅后即焚</h2>
-		<h3>请勿保留</h3>
+	<div class="warp preview" id="pre">
+		<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
 	</div>
-	<div class="pager"></div>
-	<input class="inputDate" id="inputDate">
-	<div class="accounts-l chart" data-percent="75">
-		<span class="percent"></span>
-		<span>%</span>
+	<div class="toolBar">
+		<div class="toggle f-usn" id="togglev">
+			<div class="togglein">
+				<div class="togglein2"></div>
+			</div> <i></i>
+		</div>
+		<div class="bwrapin f-cb">
+			<div class="info">
+				<ul class="m-panelbtns">
+					<li>
+						<a class="f-ib demo" id="demobnt">DEMO</a>
+					</li>
+					<li>
+						<a class="f-ib" id="htmlbnt">HTML</a>
+					</li>
+					<li>
+						<a class="f-ib" id="cssbnt">CSS</a>
+					</li>
+					<li>
+						<a class="f-ib js" id="jsbnt">JavaScript</a>
+					</li>
+				</ul>
+			</div>
+			<div class="btns">
+				<a href="javascript:void(0)" id="export" class="export">导 出</a>
+				<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
+				<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
+			</div>
+		</div>
 	</div>
-	<div class="table"></div>
-	<script type="text/javascript" src="js/sea.js"></script>
-	<script type="text/javascript">seajs.use("model/index");</script>
-</body>
-</head>
-</html>
-		</textarea>
-	</form>
+	<div class="warp">
+		<div class="Demo"></div>
+		<div class="dtlcodewrap">
+			<div class="dtlcode">
+				<form>
+					<textarea id="_html"></textarea>
+				</form>
+				<form>
+					<textarea id="_css"></textarea>
+				</form>
+				<form>
+					<textarea id="_js"></textarea>
+				</form>
+			</div>
 
-	<script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        lineNumbers: true,
-        extraKeys: {"Alt-/": "autocomplete"}
-      });
-    </script>
+		</div>
+	</div>
+	<script src="data/data.js"></script>
+	<script src="lib/index.js"></script>
 </body>
 </html>

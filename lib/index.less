@@ -4,8 +4,25 @@ body,html{
 	height: 100%;
 	overflow: hidden;
 }
+li {
+	list-style: none;
+}
+ul{
+	padding: 0;
+}
+.f-cb {
+	zoom: 1;
+}
+.f-cb:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	content: ".";
+}
 .warp{
-	height: 50%;
+	height: 60%;
 	width: 100%;
 	form{
 		height: 100%;
@@ -13,6 +30,7 @@ body,html{
 		float: left;
 	}
 }
+
 .CodeMirror {
 	line-height: 1em;
 	font-family: monospace;
@@ -23,4 +41,134 @@ body,html{
 }
 .preview{
 	border-bottom: 1px solid #aaa;
+}
+.toolBar{
+	position: relative;
+	z-index: 99;
+	height: 58px;
+	border-bottom: 1px solid #AAA;
+	-ms-box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.toggle {
+	position: relative;
+	height: 5px;
+	overflow: hidden;
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 1px solid #C2C2C2;
+	cursor: n-resize;
+}
+.togglein {
+	border-bottom: 1px solid #C6C6C6;
+	border-top: 1px solid #AFAEAE;
+	height: 3px;
+	overflow: hidden;
+}
+.togglein2 {
+	background: none repeat scroll 0 0 #BCBCBC;
+	border-bottom: 1px solid #C2C2C2;
+	border-top: 1px solid #B5B5B5;
+	height: 1px;
+	overflow: hidden;
+}
+.toggle i {
+	border-top: 2px dotted #FFFFFF;
+	height: 1px;
+	left: 50%;
+	margin: 0 0 0 -5px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	width: 10px;
+}
+.bwrapin {
+	background: url(icn2.png) repeat-x 0 -161px;
+}
+.bwrapin {
+	position: relative;
+	height: 51px;
+	padding: 0 0 0 15px;
+	background-color: #E5E5E5;
+}
+.m-panelbtns {
+	margin: 10px 0 0 20px;
+	position: absolute;
+	li {
+		float: left;
+		cursor: pointer;
+	}
+	a.demo {
+		border-radius: 2px 0 0 2px;
+		margin-left: 0;
+	}
+	a:hover {
+		color: #333;
+		background-color: #f0f0f0;
+	}
+	a {
+		float: left;
+		padding: 0 15px;
+		height: 29px;
+		line-height: 29px;
+		border: 1px solid #b3b3b3;
+		margin-left: -1px;
+		text-shadow: 1px 1px #f7f7f7;
+		color: #333;
+	}
+}
+.btns {
+	display: inline;
+	float: right;
+	margin: 0 -1px 0 0;
+	a{
+		background: url(icn2.png);
+		border-right: 1px solid #BBB;
+		cursor: pointer;
+		float: left;
+		height: 51px;
+		overflow: hidden;
+		text-indent: -2000px;
+		width: 62px;
+	}
+	a.export {
+		background-position: 0 -214px;
+	}
+	a.export:hover {
+		background-position: 0 -266px;
+	}
+	a.run {
+		background-position: 0 -317px;
+	}
+	a.run:hover {
+		background-position: 0 -369px;
+	}
+	a.reset {
+		background-position: 0 -421px;
+	}
+	a.reset:hover {
+		background-position: 0 -473px;
+	}
+}
+.f-ib {
+	display: inline-block;
+}
+.Demo {
+	float: left;
+	position: relative;
+	height: 100%;
+	width: 240px;
+	border-top: 3px solid #f0f0f0;
+	z-index: 2;
+}
+.dtlcodewrap {
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 100%;
+	margin-left: -240px;
+}
+.dtlcode {
+	position: relative;
+	height: 100%;
+	margin-left: 240px;
 }

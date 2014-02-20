@@ -1,27 +1,30 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-.warp {
-  height: 50%;
-  width: 100%;
-}
-.warp form {
-  height: 100%;
-  width: 33.33333%;
-  float: left;
-}
-.CodeMirror {
-  line-height: 1em;
-  font-family: monospace;
-  position: relative;
-  overflow: hidden;
-  border-left: 1px solid #aaa;
-  _overflow: auto;
-}
-.preview {
-  border-bottom: 1px solid #aaa;
-}
+body,html{margin:0;padding:0;height:100%;overflow:hidden}
+li{list-style:none}
+ul{padding:0}
+.f-cb{zoom:1}
+.f-cb:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}
+.warp{height:60%;width:100%}.warp form{height:100%;width:33.33333%;float:left}
+.CodeMirror{line-height:1em;font-family:monospace;position:relative;overflow:hidden;border-left:1px solid #aaa;_overflow:auto}
+.preview{border-bottom:1px solid #aaa}
+.toolBar{position:relative;z-index:99;height:58px;border-bottom:1px solid #aaa;-ms-box-shadow:0 3px 6px rgba(0,0,0,0.2);box-shadow:0 3px 6px rgba(0,0,0,0.2)}
+.toggle{position:relative;height:5px;overflow:hidden;border-top:1px solid #a8a8a8;border-bottom:1px solid #c2c2c2;cursor:n-resize}
+.togglein{border-bottom:1px solid #c6c6c6;border-top:1px solid #afaeae;height:3px;overflow:hidden}
+.togglein2{background:none repeat scroll 0 0 #bcbcbc;border-bottom:1px solid #c2c2c2;border-top:1px solid #b5b5b5;height:1px;overflow:hidden}
+.toggle i{border-top:2px dotted #fff;height:1px;left:50%;margin:0 0 0 -5px;overflow:hidden;position:absolute;top:50%;width:10px}
+.bwrapin{background:url(icn2.png) repeat-x 0 -161px}
+.bwrapin{position:relative;height:51px;padding:0 0 0 15px;background-color:#e5e5e5}
+.m-panelbtns{margin:10px 0 0 20px;position:absolute}.m-panelbtns li{float:left;cursor:pointer}
+.m-panelbtns a.demo{border-radius:2px 0 0 2px;margin-left:0}
+.m-panelbtns a:hover{color:#333;background-color:#f0f0f0}
+.m-panelbtns a{float:left;padding:0 15px;height:29px;line-height:29px;border:1px solid #b3b3b3;margin-left:-1px;text-shadow:1px 1px #f7f7f7;color:#333}
+.btns{display:inline;float:right;margin:0 -1px 0 0}.btns a{background:url(icn2.png);border-right:1px solid #bbb;cursor:pointer;float:left;height:51px;overflow:hidden;text-indent:-2000px;width:62px}
+.btns a.export{background-position:0 -214px}
+.btns a.export:hover{background-position:0 -266px}
+.btns a.run{background-position:0 -317px}
+.btns a.run:hover{background-position:0 -369px}
+.btns a.reset{background-position:0 -421px}
+.btns a.reset:hover{background-position:0 -473px}
+.f-ib{display:inline-block}
+.Demo{float:left;position:relative;height:100%;width:240px;border-top:3px solid #f0f0f0;z-index:2}
+.dtlcodewrap{position:relative;float:right;width:100%;height:100%;margin-left:-240px}
+.dtlcode{position:relative;height:100%;margin-left:240px}
