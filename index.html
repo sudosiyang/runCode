@@ -12,40 +12,53 @@
 </head>
 <body>
 	<div class="warp preview" id="pre">
-		<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
-	</div>
-	<div class="toolBar">
-		<div class="toggle f-usn" id="togglev">
-			<div class="togglein">
-				<div class="togglein2"></div>
-			</div> <i></i>
+		<div class="wp" id="wp">
+			<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
 		</div>
-		<div class="bwrapin f-cb">
-			<div class="info">
-				<ul class="m-panelbtns">
-					<li>
-						<a class="f-ib demo" id="demobnt">DEMO</a>
-					</li>
-					<li>
-						<a class="f-ib" id="htmlbnt">HTML</a>
-					</li>
-					<li>
-						<a class="f-ib" id="cssbnt">CSS</a>
-					</li>
-					<li>
-						<a class="f-ib js" id="jsbnt">JavaScript</a>
-					</li>
-				</ul>
+		<div class="toolBar">
+			<div class="toggle f-usn" id="togglev">
+				<div class="togglein">
+					<div class="togglein2"></div>
+				</div> <i></i>
 			</div>
-			<div class="btns">
-				<a href="javascript:void(0)" id="export" class="export">导 出</a>
-				<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
-				<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
+			<div class="bwrapin f-cb">
+				<div class="info">
+					<ul class="m-panelbtns">
+						<li>
+							<a class="f-ib demo" id="demobnt">DEMO</a>
+						</li>
+						<li>
+							<a class="f-ib" id="htmlbnt">HTML</a>
+						</li>
+						<li>
+							<a class="f-ib" id="cssbnt">CSS</a>
+						</li>
+						<li>
+							<a class="f-ib js" id="jsbnt">JavaScript</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btns">
+					<a href="javascript:void(0)" id="export" class="export">导 出</a>
+					<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
+					<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="warp">
-		<div class="Demo"></div>
+	<div class="warp f-cb wraptag">
+		<div class="Demo">
+			<ul id="list">
+				<li class="active" attr="dialog">dialog控件</li>
+				<li attr="pager">分页插件</li>
+				<li attr="item">表格渲染模板</li>
+				<li attr="copy">复制</li>
+				<li attr="datepick">日历控件</li>
+				<li attr="suggest">建议工具</li>
+				<li attr="pieChart">圆饼状态图</li>
+				<li attr="slider">滑块控制</li>
+			</ul>
+		</div>
 		<div class="dtlcodewrap">
 			<div class="dtlcode">
 				<form>
@@ -62,6 +75,8 @@
 		</div>
 	</div>
 	<script src="data/data.js"></script>
+	<script src="lib/jquery.js"></script>
 	<script src="lib/index.js"></script>
+
 </body>
 </html>

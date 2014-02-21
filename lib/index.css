@@ -1,12 +1,14 @@
-body,html{margin:0;padding:0;height:100%;overflow:hidden}
+body,html{margin:0;padding:0;height:100%;width:100%;overflow:hidden;word-wrap:break-word;font:12px normal "Consolas";color:#333;background:#fff}
 li{list-style:none}
-ul{padding:0}
+ul{padding:0;margin:0}
 .f-cb{zoom:1}
 .f-cb:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}
-.warp{height:60%;width:100%}.warp form{height:100%;width:33.33333%;float:left}
-.CodeMirror{line-height:1em;font-family:monospace;position:relative;overflow:hidden;border-left:1px solid #aaa;_overflow:auto}
+.warp{height:50%;width:100%}.warp form{position:relative;float:left;width:33.3%;height:100%;background-color:#f9f9f9;border-top:3px solid #f9f9f9;_overflow:auto}
+.wraptag{overflow:hidden}
+._code{height:100%}
+.CodeMirror{line-height:1em;font-family:monospace;position:relative;overflow:hidden;height:100%;border-left:1px solid #aaa;_overflow:auto}
 .preview{border-bottom:1px solid #aaa}
-.toolBar{position:relative;z-index:99;height:58px;border-bottom:1px solid #aaa;-ms-box-shadow:0 3px 6px rgba(0,0,0,0.2);box-shadow:0 3px 6px rgba(0,0,0,0.2)}
+.toolBar{position:relative;width:100%;z-index:99;height:58px;border-bottom:1px solid #aaa;-ms-box-shadow:0 3px 6px rgba(0,0,0,0.2);box-shadow:0 3px 6px rgba(0,0,0,0.2)}
 .toggle{position:relative;height:5px;overflow:hidden;border-top:1px solid #a8a8a8;border-bottom:1px solid #c2c2c2;cursor:n-resize}
 .togglein{border-bottom:1px solid #c6c6c6;border-top:1px solid #afaeae;height:3px;overflow:hidden}
 .togglein2{background:none repeat scroll 0 0 #bcbcbc;border-bottom:1px solid #c2c2c2;border-top:1px solid #b5b5b5;height:1px;overflow:hidden}
@@ -25,6 +27,6 @@ ul{padding:0}
 .btns a.reset{background-position:0 -421px}
 .btns a.reset:hover{background-position:0 -473px}
 .f-ib{display:inline-block}
-.Demo{float:left;position:relative;height:100%;width:240px;border-top:3px solid #f0f0f0;z-index:2}
+.Demo{float:left;position:relative;height:100%;width:240px;border-top:3px solid #f0f0f0;z-index:2}.Demo li{position:relative;width:100%;border-bottom:1px solid #e1e1e1;line-height:33px;background-color:#f0f0f0;padding-left:20px;cursor:pointer}.Demo li:hover,.Demo li.active{background:#1a4568;color:#fff}
 .dtlcodewrap{position:relative;float:right;width:100%;height:100%;margin-left:-240px}
 .dtlcode{position:relative;height:100%;margin-left:240px}
