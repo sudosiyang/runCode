@@ -1,4 +1,4 @@
-var path="http://192.168.1.10/susu/TNJ/js/_sea.js";
+var path="http://www.ssy.me/TNJ/js/_sea.js";
 var Data = {
 	tooltip: {
 		html: "<div class='tip'></div>\n<script src='"+path+"'></script>",
