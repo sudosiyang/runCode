@@ -11,69 +11,107 @@
 	<script src="mode/javascript/javascript.js"></script>
 </head>
 <body>
-	<div class="warp preview" id="pre">
-		<div class="wp" id="wp">
-			<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
-		</div>
-		<div class="toolBar">
-			<div class="toggle f-usn" id="togglev">
-				<div class="togglein">
-					<div class="togglein2"></div>
-				</div> <i></i>
-			</div>
-			<div class="bwrapin f-cb">
-				<div class="info">
-					<ul class="m-panelbtns">
-						<li>
-							<a class="f-ib demo" id="demobnt">DEMO</a>
-						</li>
-						<li>
-							<a class="f-ib" id="htmlbnt">HTML</a>
-						</li>
-						<li>
-							<a class="f-ib" id="cssbnt">CSS</a>
-						</li>
-						<li>
-							<a class="f-ib js" id="jsbnt">JavaScript</a>
-						</li>
-					</ul>
-				</div>
-				<div class="btns">
-					<a href="javascript:void(0)" id="export" class="export">导 出</a>
-					<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
-					<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="warp f-cb wraptag">
-		<div class="Demo">
-			<ul id="list">
-				<li class="active" attr="dialog">dialog控件</li>
-				<li attr="pager">分页插件</li>
-				<li attr="item">表格渲染模板</li>
-				<li attr="copy">复制</li>
-				<li attr="datepick">日历控件</li>
-				<li attr="suggest">建议工具</li>
-				<li attr="pieChart">圆饼状态图</li>
-				<li attr="slider">滑块控制</li>
-				<li attr="validate">表单验证</li>
-				<li attr="parseTpl">对象渲染</li>
+	<div class="g_top">
+		<div class="page f-cb">
+			<h1 class="logo">
+				<a hidefocus="true" href="#">TEJ</a>
+			</h1>
+			<ul class="m-nav" id="g_nav">
+				<li class="fst">
+					<span>
+						<a hidefocus="true" href="#"> <em>首页</em><sub class="cor">&nbsp;</sub>
+						</a>
+					</span>
+				</li>
+				<li>
+					<span>
+						<a hidefocus="true" href="javascript:void(0)" > <em>文档</em><sub class="cor">&nbsp;</sub>
+						</a>
+					</span>
+				</li>
+				<li>
+					<span>
+						<a hidefocus="true" href="javascript:void(0)">
+							<em>下载</em><sub class="cor">&nbsp;</sub>
+						</a>
+					</span>
+				</li>
+				<li class="lst">
+					<span>
+						<a hidefocus="true" href="javascript:void(0)" class="z-slt">
+							<em>代码</em><sub class="cor">&nbsp;</sub>
+						</a>
+					</span>
+				</li>
 			</ul>
 		</div>
-		<div class="dtlcodewrap">
-			<div class="dtlcode">
-				<form>
-					<textarea id="_html"></textarea>
-				</form>
-				<form>
-					<textarea id="_css"></textarea>
-				</form>
-				<form>
-					<textarea id="_js"></textarea>
-				</form>
+	</div>
+	<div id="g_nav" class="m-subnav m-subnav-up"></div>
+	<div id="code">
+		<div class="warp preview" id="pre">
+			<div class="wp" id="wp">
+				<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
 			</div>
+			<div class="toolBar">
+				<div class="toggle f-usn" id="togglev">
+					<div class="togglein">
+						<div class="togglein2"></div>
+					</div> <i></i>
+				</div>
+				<div class="bwrapin f-cb">
+					<div class="info">
+						<ul class="m-panelbtns">
+							<li>
+								<a class="f-ib demo" id="demobnt">DEMO</a>
+							</li>
+							<li>
+								<a class="f-ib" id="htmlbnt">HTML</a>
+							</li>
+							<li>
+								<a class="f-ib" id="cssbnt">CSS</a>
+							</li>
+							<li>
+								<a class="f-ib js" id="jsbnt">JavaScript</a>
+							</li>
+						</ul>
+					</div>
+					<div class="btns">
+						<a href="javascript:void(0)" id="export" class="export">导 出</a>
+						<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
+						<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="warp f-cb wraptag">
+			<div class="Demo">
+				<ul id="list">
+					<li class="active" attr="dialog">dialog控件</li>
+					<li attr="pager">分页插件</li>
+					<li attr="item">表格渲染模板</li>
+					<li attr="copy">复制</li>
+					<li attr="datepick">日历控件</li>
+					<li attr="suggest">建议工具</li>
+					<li attr="pieChart">圆饼状态图</li>
+					<li attr="slider">滑块控制</li>
+					<li attr="validate">表单验证</li>
+					<li attr="parseTpl">对象渲染</li>
+				</ul>
+			</div>
+			<div class="dtlcodewrap">
+				<div class="dtlcode">
+					<form>
+						<textarea id="_html"></textarea>
+					</form>
+					<form>
+						<textarea id="_css"></textarea>
+					</form>
+					<form>
+						<textarea id="_js"></textarea>
+					</form>
+				</div>
 
+			</div>
 		</div>
 	</div>
 	<script src="data/data.js"></script>

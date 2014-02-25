@@ -17,7 +17,7 @@ var Data = {
 	},
 	item:{
 		html:"<div class='content'>\n	<div class='table'></div>\n</div>\n<script src='"+path+"'></script>",
-		css:".content{\n	width:900px;\n  	margin:0 auto;\n}",
+		css:".content{\n	width:900px;\n  	margin:0 auto;\n  	text-align: center;\n}",
 		js:'/**\n* @parent 放置插件的容器\n* @item  表头数据 “键” 表示绑定域的ID，对应的之值表示表头名称\n* @data  数据对象数组\n* @display_num 按钮最多显示数量\n* @pager true:时启用分页插件,默认为:false\n* @per_item 每页显示数量\n**/\nseajs.use("lib/util/item/item",function(item){\n  item.init({\n	parent:".table",\n	item:{"ider":"ddd","ddd":"weqwe"},\n	data:[{"ider":"12","ddd":"dasd"},{"ider":"1222","ddd":"da3sd"},{"ider":"1tt2","ddd":"dasd"},{"ider":"1tt2","ddd":"dasd"},{"ider":"122t2","ddd":"da3sd"},{"ider":"12","ddd":"dasd"},{"ider":"12","ddd":"dasd"},{"ider":"1222","ddd":"da3sd"},{"ider":"12","ddd":"dasd"},{"ider":"12","ddd":"dasd"},{"ider":"1222","ddd":"da3sd"},{"ider":"12","ddd":"dasd"},{"ider":"1222","ddd":"da3sd"},{"ider":"12","ddd":"dasd"},{"ider":"1222","ddd":"da3sd"}],\n	pager:true,\n	per_item:3,\n	display_num:5\n  })\n})'
 	},
 	copy:{
