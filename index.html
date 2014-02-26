@@ -3,12 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RunCode</title>
-	<script src="lib/codemirror.js"></script>
-	<link rel="stylesheet" href="lib/codemirror.css">
-	<link rel="stylesheet" href="lib/index.css">
-	<script src="mode/xml/xml.js"></script>
-	<script src="mode/css/css.js"></script>
-	<script src="mode/javascript/javascript.js"></script>
+	<link rel="stylesheet" href="lib/css/index.css">
 </head>
 <body>
 	<div class="g_top">
@@ -19,7 +14,7 @@
 			<ul class="m-nav" id="g_nav">
 				<li class="fst">
 					<span>
-						<a hidefocus="true" href="#"> <em>首页</em><sub class="cor">&nbsp;</sub>
+						<a hidefocus="true" href="." class="z-slt"> <em>首页</em><sub class="cor">&nbsp;</sub>
 						</a>
 					</span>
 				</li>
@@ -38,7 +33,7 @@
 				</li>
 				<li class="lst">
 					<span>
-						<a hidefocus="true" href="javascript:void(0)" class="z-slt">
+						<a hidefocus="true" href="code" >
 							<em>代码</em><sub class="cor">&nbsp;</sub>
 						</a>
 					</span>
@@ -47,78 +42,17 @@
 		</div>
 	</div>
 	<div id="g_nav" class="m-subnav m-subnav-up"></div>
-	<div id="code">
-		<div class="warp preview" id="pre">
-			<div class="wp" id="wp">
-				<iframe frameborder="0" id="preview" width="100%" height="100%"></iframe>
-			</div>
-			<div class="toolBar">
-				<div class="toggle f-usn" id="togglev">
-					<div class="togglein">
-						<div class="togglein2"></div>
-					</div> <i></i>
-				</div>
-				<div class="bwrapin f-cb">
-					<div class="info">
-						<ul class="m-panelbtns">
-							<li>
-								<a class="f-ib demo" id="demo">DEMO</a>
-							</li>
-							<li>
-								<a class="f-ib" id="html">HTML</a>
-							</li>
-							<li>
-								<a class="f-ib" id="css">CSS</a>
-							</li>
-							<li>
-								<a class="f-ib js" id="js">JavaScript</a>
-							</li>
-						</ul>
-					</div>
-					<div class="btns">
-						<a href="javascript:void(0)" id="export" class="export">导 出</a>
-						<a href="javascript:void(0)" id="run" class="run" onclick="runCode()">运 行</a>
-						<a href="javascript:void(0)" id="reset" class="reset">重 置</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="warp f-cb wraptag">
-			<div class="Demo">
-				<ul id="list">
-					<li class="active" attr="dialog">dialog控件</li>
-					<li attr="pager">分页插件</li>
-					<li attr="item">表格渲染模板</li>
-					<li attr="copy">复制</li>
-					<li attr="datepick">日历控件</li>
-					<li attr="suggest">建议工具</li>
-					<li attr="pieChart">圆饼状态图</li>
-					<li attr="slider">滑块控制</li>
-					<li attr="validate">表单验证</li>
-					<li attr="parseTpl">对象渲染</li>
-					<li attr="stringCat">字符串连接</li>
-					<li attr="cookie">cookie控件</li>
-				</ul>
-			</div>
-			<div class="dtlcodewrap">
-				<div class="dtlcode">
-					<form>
-						<textarea id="_html"></textarea>
-					</form>
-					<form>
-						<textarea id="_css"></textarea>
-					</form>
-					<form>
-						<textarea id="_js"></textarea>
-					</form>
-				</div>
-
+	<div class="n-span">
+		<div class="page f-cb">
+			<img src="lib/css/images/demo.png" class="l-img">
+			<div class="r-word">
+				<h1>Tetequ Easy Javascript</h1>
+				<h2>特特区JS更好的解决方案</h2>
+				<a href="download/TNJ-0.8.3.zip" class="download">
+					下载-v0.8.3
+				</a>
 			</div>
 		</div>
 	</div>
-	<script src="data/data.js"></script>
-	<script src="lib/jquery.js"></script>
-	<script src="lib/index.js"></script>
-
 </body>
 </html>
