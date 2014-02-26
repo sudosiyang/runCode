@@ -8,12 +8,12 @@ var Data = {
 	pager: {
 		html: "<div class='pager'></div>\n<script src='"+path+"'></script>",
 		css: "",
-		js: '/**\n* @parent 放置插件的容器\n* @current 当前页\n* @item  每页显示数量\n* @total  数据总数\n* @display_num 按钮最多显示数量\n* @selectChange 选项更改时触发的事件\n**/\nseajs.use("lib/util/pager/page",function(pager){\n  pager.init({\n		parent: ".pager",\n		current: 1,\n		item: 100,\n		total: 270,\n		display_num:5,\n		selectChange: function() {\n			console.log(this.current);\n		}\n	});\n})'
+		js: '/**\n* @parent 放置插件的容器\n* @current 当前页\n* @item  每页显示数量\n* @total  数据总数\n* @display_num 按钮最多显示数量\n* @selectChange 选项更改时触发的事件\n**/\nseajs.use("lib/util/pager/page",function(pager){\n  pager.init({\n		parent: ".pager",\n		current: 1,\n		item: 10,\n		total: 270,\n		display_num:5,\n		selectChange: function() {\n			console.log(this.current);\n		}\n	});\n})'
 	},
 	dialog: {
 		html: "<div class='con' style='display:none'>这是一个测试，这是抓取过来的隐藏DOM</div>\n<script src='"+path+"'></script>",
 		css: "",
-		js: '/*!Extend jquery.js*/\n/**\n* @title 标题内容\n* @content 如果传入的是HTMLElement类型，\n		   如果是隐藏元素会给其设置display:block以显示该元素，\n		   其他属性与绑定的事件都会完整保留\n* @ok 	 确定按钮回调函数。\n		 函数如果返回false将阻止对话框关闭；函数this指针指向内部api；\n		 如果传入true表示只显示有关闭功能的按钮\n* @okVal  "确定按钮"文字\n* @cancel 取消按钮回调函数。\n		  函数如果返回false将阻止对话框关闭；函数this指针指向内部api；如果传入true表示只显示有关闭功能的按钮\n	      对话框标题栏的关闭按钮其实就是取消按钮，只不过视觉不同罢了，点击同样触发cancel事件\n* @cancelVal "取消按钮"文字\n* @copy   复制按钮，复制文字\n* @copy_target 复制目标默认.textarea\n* @width   设置消息内容宽度，可以带单位。一般不需要设置此，对话框框架会自己适应内容。\n		   如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整\n* @height  设置消息内容高度，可以带单位。不建议设置此，而应该让内容自己撑开高度。\n		   如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整\n* @drag   是否允许用户拖动位置\n* @time   设置对话框显示时间。以毫秒为单位\n*/\nseajs.use("lib/util/dialog/dialog",function(pop){\n  pop.dialog({\n    title:"这是一个测试",\n    content:$(".con"),\n    ok:function(){\n  		alert();\n  	},\n    copy:function(){\n    	this.tip()\n    }\n  })	\n})'
+		js: '/*!Extend jquery.js*/\n/**\n* @title 标题内容\n* @content 如果传入的是HTMLElement类型，\n		   如果是隐藏元素会给其设置display:block以显示该元素，\n		   其他属性与绑定的事件都会完整保留\n* @ok 	 确定按钮回调函数。\n		 函数如果返回false将阻止对话框关闭；函数this指针指向内部api；\n		 如果传入true表示只显示有关闭功能的按钮\n* @okVal  "确定按钮"文字\n* @cancel 取消按钮回调函数。\n		  函数如果返回false将阻止对话框关闭；函数this指针指向内部api；如果传入true表示只显示有关闭功能的按钮\n	      对话框标题栏的关闭按钮其实就是取消按钮，只不过视觉不同罢了，点击同样触发cancel事件\n* @cancelVal "取消按钮"文字\n* @copy   复制按钮，复制文字\n* @copy_target 复制目标默认.textarea\n* @width   设置消息内容宽度，可以带单位。一般不需要设置此，对话框框架会自己适应内容。\n		   如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整\n* @height  设置消息内容高度，可以带单位。不建议设置此，而应该让内容自己撑开高度。\n		   如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整\n* @drag   是否允许用户拖动位置\n* @time   设置对话框显示时间。以毫秒为单位\n*/\nseajs.use("lib/util/dialog/dialog",function(pop){\n  pop.dialog({\n    title:"这是一个测试",\n    content:$(".con"),\n    ok:function(){\n  		alert();\n  	},\n    drag:true,\n    copy:function(){\n    	this.tip();\n    },\n    copy_target:".con",\n  })	\n})'
 	},
 	item:{
 		html:"<div class='content'>\n	<div class='table'></div>\n</div>\n<script src='"+path+"'></script>",
@@ -46,7 +46,7 @@ var Data = {
 		js:'/**\n* @parent 插件容器\n* @min 最小刻度值 默认0\n* @max 最大刻度值 默认100\n* @onChange 滑块value改变时触发\n\n* setValue 重设滑块值的函数\n**/\n\nseajs.use("lib/util/slider/slider",function(slider){\n  slider.init({\n	parent: ".slider",\n	min: 20,\n	max: 200,\n	onChange: function() {\n		console.log(this.value);\n	}\n  });\n  //slider.setValue(75);\n})'
 	},
 	validate:{
-		html:"<form action=''>\n  邮箱验证:\n  <div min='2' max='11' reg='^(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)|((13[0-9]|147|15[0-9]|18[0-9])\d{8})$' data-trigger='' data-placement='right'>\n    <input />\n  </div>\n  <div>\n    <input type='submit'/>\n  </div>\n</form>\n<script src='"+path+"'></script>",
+		html:"<form action=''>\n  邮箱验证:\n  <div min='2' max='11' reg='^(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)|((13[0-9]|147|15[0-9]|18[0-9])\d{8})$' data-trigger='' data-placement='right'>\n    <input />\n  </div>\n  <div>\n    <input type='submit'  value='确定'/>\n  </div>\n</form>\n<script src='"+path+"'></script>",
 		css:"body{\n	width:980px;\n  	margin: 50px auto;\n}\nform{\n	width:200px;\n}\ninput{\n	width:100%;\n}",
 		js:'/**\n* 在HTML中的属性\n	@max 字符最大长度 默认：9999\n    @min 字符自小长度 默认：0\n    @reg 过滤用的正则表达式 \n    @data-trigger 触发条件 默认hover\n    @data-placement 显示位置 默认top\n**/\n\nseajs.use("lib/base/util",function(util){\n  util.validate();\n})'
 	},
