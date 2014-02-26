@@ -30,6 +30,7 @@ ul{padding:0;margin:0}
 .m-panelbtns{margin:10px 0 0 20px;position:absolute}.m-panelbtns li{float:left;cursor:pointer}
 .m-panelbtns a.demo{border-radius:2px 0 0 2px;margin-left:0}
 .m-panelbtns a:hover{color:#333;background-color:#f0f0f0}
+.m-panelbtns a._select{background-color:#e2e2e2}
 .m-panelbtns a{float:left;padding:0 15px;height:29px;line-height:29px;border:1px solid #b3b3b3;margin-left:-1px;text-shadow:1px 1px #f7f7f7;color:#333}
 .btns{display:inline;float:right;margin:0 -1px 0 0}.btns a{background:url(images/icn2.png);border-right:1px solid #bbb;cursor:pointer;float:left;height:51px;overflow:hidden;text-indent:-2000px;width:62px}
 .btns a.export{background-position:0 -214px}

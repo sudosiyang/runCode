@@ -54,5 +54,10 @@ var Data = {
 		html:"<div class='temp'></div>\n<div class='result'></div>\n<script src='"+path+"'></script>",
 		css:"",
 		js:'/**\n* str 模板\n* data 数据\n* 解析模版tpl。当data未传入时返回编译结果函数；\n* 当某个template需要多次解析时，建议保存编译结果函数，\n* 然后调用此函数来得到结果\n**/\nseajs.use("lib/base/util",function(util){\n  var str = "<p>房间名称：<%=name%></br>房间人数：<%=num%></p>";\n  var obj = {num:"234",name: "hello"};\n  var value=util.parseTpl(str,obj);\n  $(".temp").append(value).next().text(value);\n})'
+	},
+	stringCat:{
+		html:"<div class='temp'></div>\n<div class='result'></div>\n<script src='"+path+"'></script>",
+		css:"",
+		js:'/**\n* str 模板\n* data 数据\n**/\nseajs.use("lib/base/util",function(util){\n  var str = "<p>房间名称：%%</br>房间人数：%%</p>";\n  var value = util.stringCat(str,3,4);\n  $(".temp").append(value).next().text(value);\n});'
 	}
 }
