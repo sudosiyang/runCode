@@ -1,20 +1,196 @@
-body,html{margin:0;padding:0;height:100%;width:100%;overflow:hidden;word-wrap:break-word;font:12px normal "Consolas","微软雅黑";color:#333;background:#fff}
-li{list-style:none}
-ul{padding:0;margin:0}
-.f-cb{zoom:1}
-.f-cb:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}
-.g_top{position:relative;z-index:1000;height:70px;background:url(images/topbar.png) repeat-x 0 -80px}.g_top h1{float:left;width:600px;margin-top:23px}.g_top h1 a{background:url(images/logo.png) no-repeat;float:left;width:183px;height:33px;text-indent:-9999px}
-.g_top .m-nav li{float:left;position:relative;background:url(images/topbar.png) repeat-x 0 0;background-position:right -300px;height:70px}.g_top .m-nav li.lst,.g_top .m-nav li.fst span{background:none}
-.g_top .m-nav a{display:block;position:relative;padding-left:2px;text-align:center;text-decoration:none;line-height:75px}.g_top .m-nav a em{display:block;font-size:1.2em;padding:0 20px 0 18px;overflow:hidden;color:#ccc;text-shadow:0 1px 0 #1b1b1b;cursor:pointer;font-style:normal;text-align:left}
-.g_top .m-nav a:hover{position:relative;background:url(images/topbar.png) repeat-x 0 0;background-position:left -470px;margin:0 -1px;text-decoration:none}.g_top .m-nav a:hover em{padding:0 21px 0 19px;background:url(images/topbar.png) repeat-x 0 0;background-position:right -470px}
-.g_top .m-nav a.z-slt,.g_top .m-nav a.z-slt:hover{position:relative;margin:0 -1px;background:url(images/topbar.png) repeat-x 0 0;background-position:left -155px}.g_top .m-nav a.z-slt em,.g_top .m-nav a.z-slt:hover em{padding:0 21px 0 19px;background:url(images/topbar.png) repeat-x 0 0;background-position:right -155px}
-.g_top .m-nav a.z-slt .cor,.g_top .m-nav a.z-slt:hover .cor{display:block;position:absolute;left:50%;top:63px;width:14px;height:9px;margin-left:-7px;overflow:hidden;background:url(images/topbar.png) repeat-x 0 0;background-position:-226px 0}
-.g_top .m-nav a .cor{display:none}
-.g_top .m-nav span{background:url(images/topbar.png) repeat-x 0 0;background-position:left -300px;float:left;height:70px;font-size:14px}
-.m-subnav-up{height:5px;_overflow:hidden;box-shadow:0 0 6px #000}
-.m-subnav{z-index:90;background:url(images/topbar.png) repeat-x 0 -230px}
-.page{width:980px;margin:0 auto}
-.n-span{height:400px;background-image:url(images/main-bg-blur.jpg);background-position:50% 50%}.n-span .l-img{margin-top:80px;float:left}
-.n-span .r-word{float:right;width:400px;color:#fff;text-shadow:2px 2px 5px #202020}.n-span .r-word h1{margin-top:135px;font-size:2.8em}
-.n-span .r-word h2{font-size:1.8em}
-.n-span .r-word .download{display:block;padding-bottom:10px;padding-right:20px;width:189px;float:right;color:#fff;text-decoration:none;margin-top:50px;margin-right:100px;text-align:center;font-size:1.3em;line-height:55px;height:54px;background:url(images/btn.png) no-repeat;cursor:pointer}.n-span .r-word .download:hover{background:url(images/btn-hover.png) no-repeat}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  font: 12px normal "Consolas", "微软雅黑";
+  color: #333;
+  background: #fff;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.f-cb {
+  zoom: 1;
+}
+.f-cb:after {
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  content: ".";
+}
+.g_top {
+  position: relative;
+  z-index: 1000;
+  height: 70px;
+  background: url(images/topbar.png) repeat-x 0 -80px;
+}
+.g_top h1 {
+  float: left;
+  width: 600px;
+  margin-top: 23px;
+}
+.g_top h1 a {
+  background: url(images/logo.png) no-repeat;
+  float: left;
+  width: 183px;
+  height: 33px;
+  text-indent: -9999px;
+}
+.g_top .m-nav li {
+  float: left;
+  position: relative;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -300px;
+  height: 70px;
+}
+.g_top .m-nav li.lst,
+.g_top .m-nav li.fst span {
+  background: none;
+}
+.g_top .m-nav a {
+  display: block;
+  position: relative;
+  padding-left: 2px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 75px;
+}
+.g_top .m-nav a em {
+  display: block;
+  font-size: 1.2em;
+  padding: 0 20px 0 18px;
+  overflow: hidden;
+  color: #ccc;
+  text-shadow: 0 1px 0 #1b1b1b;
+  cursor: pointer;
+  font-style: normal;
+  text-align: left;
+}
+.g_top .m-nav a:hover {
+  position: relative;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -470px;
+  margin: 0 -1px;
+  text-decoration: none;
+}
+.g_top .m-nav a:hover em {
+  padding: 0 21px 0 19px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -470px;
+}
+.g_top .m-nav a.z-slt,
+.g_top .m-nav a.z-slt:hover {
+  position: relative;
+  margin: 0 -1px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -155px;
+}
+.g_top .m-nav a.z-slt em,
+.g_top .m-nav a.z-slt:hover em {
+  padding: 0 21px 0 19px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -155px;
+}
+.g_top .m-nav a.z-slt .cor,
+.g_top .m-nav a.z-slt:hover .cor {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 63px;
+  width: 14px;
+  height: 9px;
+  margin-left: -7px;
+  overflow: hidden;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: -226px 0;
+}
+.g_top .m-nav a .cor {
+  display: none;
+}
+.g_top .m-nav span {
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -300px;
+  float: left;
+  height: 70px;
+  font-size: 14px;
+}
+.m-subnav-up {
+  height: 5px;
+  _overflow: hidden;
+  box-shadow: 0 0 6px #000;
+}
+.m-subnav {
+  z-index: 90;
+  background: url(images/topbar.png) repeat-x 0 -230px;
+}
+.page {
+  width: 980px;
+  margin: 0 auto;
+}
+.n-span {
+  height: 360px;
+  position: relative;
+  background-image: url(images/main-bg-blur.jpg);
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+.n-span .l-img {
+  margin-top: 81px;
+  float: left;
+}
+.n-span .r-word {
+  text-align: center;
+  float: right;
+  width: 400px;
+  color: #fff;
+  text-shadow: 2px 2px 5px #202020;
+}
+.n-span .r-word h1 {
+  margin-top: 95px;
+  font-size: 2.8em;
+}
+.n-span .r-word h2 {
+  font-size: 1.8em;
+}
+.n-span .r-word .download {
+  display: block;
+  padding-bottom: 10px;
+  width: 189px;
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 50px;
+  margin-right: 100px;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 55px;
+  height: 54px;
+  background: url(images/btn.png) no-repeat;
+  cursor: pointer;
+}
+.n-span .r-word .download:hover {
+  background: url(images/btn-hover.png) no-repeat;
+}
+.n-span .v-span {
+  position: relative;
+  z-index: 999;
+}
+.ce {
+  border-radius: 50%;
+  background: #FFF;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
