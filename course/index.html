@@ -13,19 +13,19 @@
 			<ul class="m-nav" id="g_nav">
 				<li class="fst">
 					<span>
-						<a hidefocus="true" href="." class="z-slt"> <em>首页</em> <sub class="cor">&nbsp;</sub>
+						<a hidefocus="true" href="../" > <em>首页</em> <sub class="cor">&nbsp;</sub>
 						</a>
 					</span>
 				</li>
 				<li>
 					<span>
-						<a hidefocus="true" href="javascript:void(0)" > <em>文档</em> <sub class="cor">&nbsp;</sub>
+						<a hidefocus="true" href="../course/" class="z-slt"> <em>文档</em> <sub class="cor">&nbsp;</sub>
 						</a>
 					</span>
 				</li>
 				<li>
 					<span>
-						<a hidefocus="true" href="download/TNJ-0.8.3.zip">
+						<a hidefocus="true" href="../download/TNJ-0.8.3.zip">
 							<em>下载</em>
 							<sub class="cor">&nbsp;</sub>
 						</a>
@@ -33,7 +33,7 @@
 				</li>
 				<li class="lst">
 					<span>
-						<a hidefocus="true" href="code" >
+						<a hidefocus="true" href="../code" >
 							<em>代码</em>
 							<sub class="cor">&nbsp;</sub>
 						</a>
@@ -46,22 +46,17 @@
 		<div class="wrap">
 			<ul class="nav f-cb">
 				<li>
-					<a hidefocus="true" href="/discover" class="z-slt">
-						<em>快速入门</em>
-					</a>
-				</li>
-				<li>
-					<a hidefocus="true" href="/discover/toplist">
+					<a hidefocus="true" href="../course"  class="z-slt">
 						<em>规范</em>
 					</a>
 				</li>
 				<li>
-					<a hidefocus="true" href="/discover/playlist/">
+					<a hidefocus="true" href="javascript:alert('即将开放')">
 						<em>工具</em>
 					</a>
 				</li>
 				<li>
-					<a hidefocus="true" href="/discover/djchannel/">
+					<a hidefocus="true" href="javascript:alert('即将开放')">
 						<em>常见问题</em>
 					</a>
 				</li>
@@ -70,8 +65,109 @@
 	</div>
 	<div class="g-doc">
 		<div class="m-intro">
-			
+			<h1>一．  概述</h1>
+			<p>
+				为了统一前端开发的代码风格，以便后续代码的管理和维护，在使用前端开发框架时请遵循本文档制定的规范编写代码。
+本文档涉及的规范主要包含四个方面：注释规范、命名规范、“类”模型、控件规范，另外会简要的说明系统发布的情况。
+			</p>
+			<h1>二．  注释规范</h1>
+			<p>良好的注释可以增加代码的可读性和可维护性</p>
+			<h2>1.  文件注释</h2>
+			<p>文件注释用来说明当前文件所实现内容，主要包括说明部分和作者部分。</p>
+			<ul>
+				<li>说明部分：描述文件实现的功能、模块或接口等，如有需要增加使用说明或者范例。</li>
+				<li>作者部分：记录文件的开发者名称和联系方式，用以后续的维护或者交流沟通等。</li>
+				<li>依赖部分：记录当前文件直接依赖的其他文件，便于工具构建依赖关系。</li>
+			</ul>
+			<p>注释范例如下图所示：</p>
+			<pre class=" prettyprint prettyprinted" style="">
+				<code><span class="pln"></span><span class="com">
+/**
+ * ------------------------------------------
+ * slider封装实现文件
+ * @version  1.0
+ * @author   susu(744276721@qq.com)
+ * ------------------------------------------
+ **/
+			</span></code></pre>
+			<h2>2.  接口注释</h2>
+			<p>接口注释用来描述当前定义的接口的功能及输入输出数据，主要包括说明部分、输入部分、输出部分。</p>
+			<ul>
+				<li>说明部分：说明当前接口的功能，如有需要可增加使用说明或者范例。</li>
+				<li>输入部分：说明输入数据的类型及含义。</li>
+				<li>输出部分：说明输出数据的类型及含义。</li>
+			</ul>
+			<p>注释范例如下图所示：</p>
+			<pre class=" prettyprint prettyprinted" style="">
+				<code><span class="pln"></span><span class="com">
+/**
+ * 控件重置
+ * @param  {Object} _options 可选配置参数
+ * @return {Void}
+ */
+			</span></code></pre>
+			<h2>3.   “类”注释</h2>
+			<p>
+				“类”注释用来说明当前类的基本功能、依赖关系及可接收初始输入数据，主要包括功能描述部分、依赖关系部分、初始数据部分。关于这里的“类”可参阅JAVASCRIPT类模型部分的详细说明。
+			</p>
+			<ul>
+				<li>功能描述部分：描述"类"所代表的对象及基本功能，如需要可增加使用说明或范例。</li>
+				<li>依赖关系部分：说明"类"的依赖，以便于代码的回溯。</li>
+				<li>初始数据部分："类"对象在实例化时可接收这些数据做为初始信息。</li>
+			</ul>
+			<p>注释范例如下图所示：</p>
+			<pre class=" prettyprint prettyprinted" style="">
+				<code><span class="pln"></span><span class="com">
+/**
+ * 提示建议控件
+ * @class   提示建议控件
+ * @extends jquery
+ * @param  {Object} _options 可选配置参数，已处理参数列表如下
+ *                           input     [Node|String] - 输入框节点或者ID
+ *                           onselect  [Function]    - 选中触发事件
+ *                           onchange  [Function]    - 输入内容变化触发事件
+ */
+			</span></code></pre>
+
+			<h1>三．  命名规范</h1>
+			<p>本部分的规范主要为项目发布时的压缩混淆做准备,也为了防止误写覆盖组件参数</p>
+			<!--临时变量/参数-->
+			<h2>1. 临时变量/参数</h2>
+			<ul>
+				<li>
+					规则：“
+					<code>_</code>
+					”+描述，即增加前缀“
+					<code>_</code>
+					”（单个下划线）
+				</li>
+				<li>说明：此名称仅在当前入口文件中使用，系统发布时做混淆处理，因此在选择名称时以便于理解为主。</li>
+			</ul>
+			<p>范例：如下例所示的_options,_instance等</p>
+			<pre class=" prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln">&nbsp;_a</span><span class="pun">,</span><span class="pln">&nbsp;_b</span><span class="pun">,</span><span class="pln">&nbsp;_c </span><span class="pun">=</span><span class="pln"></span><span class="kwd">&nbsp;true</span><span class="pun">;</span></code></pre>
+			<!--私有属性/变量-->
+			<h2>2. 私有属性/变量</h2>
+			<ul>
+				<li>
+					规则：“
+					<code>__</code>
+					”+描述，即增加前缀“
+					<code>__</code>
+					”（两个下划线），变量必须有var关键字定义
+				</li>
+				<li>说明：组件属性/变量仅会在当前对象或者子类内使用，对于其他对象不可见，因此在选择名称时以便于理解为主。</li>
+			</ul>
+			<h2>3. 引用属性/变量</h2>
+			<ul>
+				<li>规则：第一个字母为大写字母，变量必须有var关键字定义</li>
+				<li>说明：引用组件/类的赋值的名称，因此在选择名称时以便于理解为主。</li>
+			</ul>
+			<pre class=" prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln">&nbsp;Dialog</span><span class="pun">&nbsp;=</span><span class="pln"></span><span class="kwd">&nbsp;require("lib/util/dialog/dialog")</span><span class="pun">;</span></code></pre>
+
 		</div>
+	</div>
+	<div class="g-ft">
+		<div class="g-mt">© 2010-2014 tetequ. All Rights Reserved.</div>
 	</div>
 </body>
 </html>

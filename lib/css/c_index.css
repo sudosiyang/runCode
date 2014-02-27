@@ -1,22 +1,281 @@
-body,html{margin:0;padding:0;height:100%;width:100%;overflow:hidden;word-wrap:break-word;font:12px normal "Consolas","微软雅黑";color:#333;background:#fff}
-li{list-style:none}
-ul{padding:0;margin:0}
-.f-cb{zoom:1}
-.f-cb:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}
-.g_top{position:relative;z-index:1000;height:70px;background:url(images/topbar.png) repeat-x 0 -80px}.g_top h1{float:left;width:600px;margin-top:23px}.g_top h1 a{background:url(images/logo.png) no-repeat;float:left;width:183px;height:33px;text-indent:-9999px}
-.g_top .m-nav li{float:left;position:relative;background:url(images/topbar.png) repeat-x 0 0;background-position:right -300px;height:70px}.g_top .m-nav li.lst,.g_top .m-nav li.fst span{background:none}
-.g_top .m-nav a{display:block;position:relative;padding-left:2px;text-align:center;text-decoration:none;line-height:75px}.g_top .m-nav a em{display:block;font-size:1.2em;padding:0 20px 0 18px;overflow:hidden;color:#ccc;text-shadow:0 1px 0 #1b1b1b;cursor:pointer;font-style:normal;text-align:left}
-.g_top .m-nav a:hover{position:relative;background:url(images/topbar.png) repeat-x 0 0;background-position:left -470px;margin:0 -1px;text-decoration:none}.g_top .m-nav a:hover em{padding:0 21px 0 19px;background:url(images/topbar.png) repeat-x 0 0;background-position:right -470px}
-.g_top .m-nav a.z-slt,.g_top .m-nav a.z-slt:hover{position:relative;margin:0 -1px;background:url(images/topbar.png) repeat-x 0 0;background-position:left -155px}.g_top .m-nav a.z-slt em,.g_top .m-nav a.z-slt:hover em{padding:0 21px 0 19px;background:url(images/topbar.png) repeat-x 0 0;background-position:right -155px}
-.g_top .m-nav a.z-slt .cor,.g_top .m-nav a.z-slt:hover .cor{display:block;position:absolute;left:50%;top:63px;width:14px;height:9px;margin-left:-7px;overflow:hidden;background:url(images/topbar.png) repeat-x 0 0;background-position:-226px 0}
-.g_top .m-nav a .cor{display:none}
-.g_top .m-nav span{background:url(images/topbar.png) repeat-x 0 0;background-position:left -300px;float:left;height:70px;font-size:14px}
-.m-subnav-up{height:5px;_overflow:hidden;box-shadow:0 0 6px #000}
-.m-subnav{z-index:90;background:url(images/topbar.png) repeat-x 0 -230px}
-.page{width:980px;margin:0 auto}
-.wrap{width:804px;padding-left:176px;margin:0 auto}
-.m-subnav{z-index:90;height:35px;background:url(images/topbar.png) repeat-x 0 -230px}.m-subnav .nav{float:right;margin-right:125px;margin-top:-3px}.m-subnav .nav li{display:inline;margin:0 17px;float:left;height:35px;overflow:hidden}
-.m-subnav .nav a{display:block;padding-left:14px;text-decoration:none}
-.m-subnav .nav a:hover,.m-subnav .nav a.z-slt{background:url(images/topbar.png) 0 0;background-position:left -268px}
-.m-subnav .nav em{display:block;font-style:normal;padding-right:14px;line-height:37px;color:#fff;text-shadow:0 1px 0 #650303}
-.nav a:hover em,.m-subnav .nav a.z-slt em{background:url(images/topbar.png) 0 0;background-position:right -268px}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  font: 12px normal "Consolas", "微软雅黑";
+  color: #333;
+  background: #fff;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.f-cb {
+  zoom: 1;
+}
+.f-cb:after {
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  content: ".";
+}
+.g_top {
+  position: relative;
+  z-index: 1000;
+  height: 70px;
+  background: url(images/topbar.png) repeat-x 0 -80px;
+}
+.g_top h1 {
+  float: left;
+  width: 600px;
+  margin-top: 23px;
+}
+.g_top h1 a {
+  background: url(images/logo.png) no-repeat;
+  float: left;
+  width: 183px;
+  height: 33px;
+  text-indent: -9999px;
+}
+.g_top .m-nav li {
+  float: left;
+  position: relative;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -300px;
+  height: 70px;
+}
+.g_top .m-nav li.lst,
+.g_top .m-nav li.fst span {
+  background: none;
+}
+.g_top .m-nav a {
+  display: block;
+  position: relative;
+  padding-left: 2px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 75px;
+}
+.g_top .m-nav a em {
+  display: block;
+  font-size: 1.2em;
+  padding: 0 20px 0 18px;
+  overflow: hidden;
+  color: #ccc;
+  text-shadow: 0 1px 0 #1b1b1b;
+  cursor: pointer;
+  font-style: normal;
+  text-align: left;
+}
+.g_top .m-nav a:hover {
+  position: relative;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -470px;
+  margin: 0 -1px;
+  text-decoration: none;
+}
+.g_top .m-nav a:hover em {
+  padding: 0 21px 0 19px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -470px;
+}
+.g_top .m-nav a.z-slt,
+.g_top .m-nav a.z-slt:hover {
+  position: relative;
+  margin: 0 -1px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -155px;
+}
+.g_top .m-nav a.z-slt em,
+.g_top .m-nav a.z-slt:hover em {
+  padding: 0 21px 0 19px;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: right -155px;
+}
+.g_top .m-nav a.z-slt .cor,
+.g_top .m-nav a.z-slt:hover .cor {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 63px;
+  width: 14px;
+  height: 9px;
+  margin-left: -7px;
+  overflow: hidden;
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: -226px 0;
+}
+.g_top .m-nav a .cor {
+  display: none;
+}
+.g_top .m-nav span {
+  background: url(images/topbar.png) repeat-x 0 0;
+  background-position: left -300px;
+  float: left;
+  height: 70px;
+  font-size: 14px;
+}
+.m-subnav-up {
+  height: 5px;
+  _overflow: hidden;
+  box-shadow: 0 0 6px #000;
+}
+.m-subnav {
+  z-index: 90;
+  background: url(images/topbar.png) repeat-x 0 -230px;
+}
+.page {
+  width: 980px;
+  margin: 0 auto;
+}
+.g-ft {
+  border-top: 2px solid #e3e3e3;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.g-mt {
+  line-height: 40px;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}
+html,
+body {
+  overflow: auto;
+}
+.wrap {
+  width: 804px;
+  padding-left: 176px;
+  margin: 0 auto;
+}
+.m-subnav {
+  z-index: 90;
+  height: 35px;
+  background: url(images/topbar.png) repeat-x 0 -230px;
+  position: relative;
+}
+.m-subnav .nav {
+  float: right;
+  margin-right: 115px;
+  margin-top: -3px;
+}
+.m-subnav .nav li {
+  display: inline;
+  margin: 0 17px;
+  float: left;
+  height: 35px;
+  overflow: hidden;
+}
+.m-subnav .nav a {
+  display: block;
+  padding-left: 14px;
+  text-decoration: none;
+}
+.m-subnav .nav a:hover,
+.m-subnav .nav a.z-slt {
+  background: url(images/topbar.png) 0 0;
+  background-position: left -268px;
+}
+.m-subnav .nav em {
+  display: block;
+  font-style: normal;
+  padding-right: 14px;
+  line-height: 37px;
+  color: #fff;
+  text-shadow: 0 1px 0 #650303;
+}
+.nav a:hover em,
+.m-subnav .nav a.z-slt em {
+  background: url(images/topbar.png) 0 0;
+  background-position: right -268px;
+}
+.g-doc {
+  width: 940px;
+  margin: 0 auto;
+}
+.m-intro {
+  padding: 45px 40px 40px;
+  border-color: #e2e2e2;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+}
+.m-intro h1 {
+  padding: 10px 0;
+  font-size: 24px;
+}
+.m-intro ul,
+.m-intro ol,
+.m-intro p {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 800px;
+  padding: 10px 0;
+  margin: 0;
+}
+.m-intro li {
+  line-height: 24px;
+  list-style: disc inside none;
+}
+pre {
+  margin: 10px 0;
+  max-width: 780px;
+  white-space: pre-wrap;
+}
+pre.prettyprint {
+  padding: 10px;
+  white-space: pre-wrap;
+}
+code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.5;
+  font-size: 13px;
+}
+pre.prettyprint,
+code.prettyprint {
+  position: relative;
+  overflow: hidden;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 1px #fff;
+  box-shadow: 0px 1px 1px #fff;
+}
+pre .pln,
+code .pln {
+  color: #a31515;
+}
+pre .kwd,
+code .kwd {
+  color: #0000ff;
+}
+pre .com,
+code .com {
+  color: #008000;
+  font-style: italic;
+}
+pre.prettyprint:after {
+  content: "代码";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgba(151, 151, 151, 0.7);
+  color: #eee;
+  -webkit-border-radius: 0px 0 0px 4px;
+  -moz-border-radius: 0px 0 0px 4px;
+  border-radius: 0px 0 0px 4px;
+}
+pre.prettyprint:hover:after {
+  display: none;
+}
