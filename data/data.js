@@ -46,7 +46,7 @@ var Data = {
 		js:'/**\n* @parent 插件容器\n* @min 最小刻度值 默认0\n* @max 最大刻度值 默认100\n* @onChange 滑块value改变时触发\n\n* setValue 重设滑块值的函数\n**/\n\nseajs.use("lib/util/slider/slider",function(slider){\n  slider.init({\n	parent: ".slider",\n	min: 20,\n	max: 200,\n	onChange: function() {\n		console.log(this.value);\n	}\n  });\n  //slider.setValue(75);\n})'
 	},
 	validate:{
-		html:"<form action=''>\n  邮箱验证:\n  <div min='2' max='11' reg='^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$' data-trigger='' data-placement='right'>\n    <input />\n  </div>\n  <div>\n    <input type='submit'  value='确定'/>\n  </div>\n</form>\n<script src='"+path+"'></script>",
+		html:"<form action=''>\n  邮箱验证:\n  <div min='2' max='11' reg='^[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+$' data-trigger='' data-placement='right'>\n    <input />\n  </div>\n  <div>\n    <input type='submit'  value='确定'/>\n  </div>\n</form>\n<script src='"+path+"'></script>",
 		css:"body{\n	width:980px;\n  	margin: 50px auto;\n}\nform{\n	width:200px;\n}\ninput{\n	width:100%;\n}",
 		js:'/**\n* 在HTML中的属性\n	@max 字符最大长度 默认：9999\n    @min 字符自小长度 默认：0\n    @reg 过滤用的正则表达式 \n    @data-trigger 触发条件 默认hover\n    @data-placement 显示位置 默认top\n**/\n\nseajs.use("lib/base/util",function(util){\n  util.validate();\n})'
 	},
