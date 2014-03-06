@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>TNJ-DOC: easyPieChart</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+   <!-- <h1 class="page-title"> easyPieChart</h1>-->
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    easyPieChart
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <!--<h4 class="name" id="easyPieChart"><span class="type-signature"></span>new easyPieChart<span class="signature">(<span class="optional">barColor</span>, <span class="optional">trackColor</span>, <span class="optional">scaleColor</span>, <span class="optional">scaleLength</span>, <span class="optional">lineCap</span>, <span class="optional">size</span>, <span class="optional">rotate</span>, <span class="optional">lineWidth</span>, <span class="optional">onStep</span>)</span><span class="type-signature"></span></h4>-->
+    
+    
+    <p class="summary">此插件主要是用来统计新的访问、跳出率、服务器负载、使用的RAM等，功能很强大，带有HTML5的动画效果，效果非常炫，IE9以下需要调用excanvas.js</p>
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        仪表状态图
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>参数:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>名称</th>
+		
+		
+		<th>类型</th>
+		
+		
+		<th>属性</th>
+		
+		
+		
+		<th>默认</th>
+		
+		
+		<th class="last">描述</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>barColor</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    #ef1e25
+                
+                </td>
+            
+            
+            <td class="description last">该curcular栏的颜色。您可以通过有效的CSS颜色字符串，<br>或一个函数，
+			它目前的百分比值，<br>并返回一个有效的CSS颜色字符串。</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>trackColor</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    #f2f2f2
+                
+                </td>
+            
+            
+            <td class="description last">轨道的颜色，或false来禁用渲染</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>scaleColor</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    #dfe0e0
+                
+                </td>
+            
+            
+            <td class="description last">刻度线的颜色，false来禁用渲染。</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>scaleLength</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    5
+                
+                </td>
+            
+            
+            <td class="description last">刻度线的长度（降低了图表的半径）</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>lineCap</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    round
+                
+                </td>
+            
+            
+            <td class="description last">定义其样式 <br>参数为: butt , round and square</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">尺寸</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>rotate</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+            
+            <td class="description last">旋转图标的角度</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>lineWidth</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
+            
+            <td class="description last">轨道宽度</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>onStep</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">在动画提供的当前值(from, to, currentValue)</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">版本:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.1</li></ul></dd>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <dt class="tag-author">作者:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>susu(744276721@qq.com)</li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>示范:</h5>
+        
+    <pre class="prettyprint"><code>// $PATH为索引路径
+require("$PATH/lib/util/pieChart/chart");
+ $(".chart").easyPieChart({
+		easing: "easeOutBounce",
+		onStep: function(from, to, percent) {
+			$(this.el).find(".percent").text(Math.round(percent));
+		},
+		lineCap: "square",
+		size: 150,
+		lineWidth: 20,
+		barColor: "#e66e1e",
+		scaleColor: false
+	});</code></pre>
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="ajax.html">ajax</a></li><li><a href="ajaxupload.html">ajaxupload</a></li><li><a href="cookie.html">cookie</a></li><li><a href="copy.html">copy</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="easyPieChart.html">easyPieChart</a></li><li><a href="item.html">item</a></li><li><a href="pager.html">pager</a></li><li><a href="parseTpl.html">parseTpl</a></li><li><a href="slider.html">slider</a></li><li><a href="stringCat.html">stringCat</a></li><li><a href="suggest.html">suggest</a></li><li><a href="tooltip.html">tooltip</a></li><li><a href="validate.html">validate</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    © 2010-2014 tetequ. All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

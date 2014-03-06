@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>TNJ-DOC: slider</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+   <!-- <h1 class="page-title"> slider</h1>-->
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    slider
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <!--<h4 class="name" id="slider"><span class="type-signature"></span>new slider<span class="signature">(<span class="optional">parent</span>, <span class="optional">min</span>, <span class="optional">max</span>, <span class="optional">onchange</span>)</span><span class="type-signature"></span></h4>-->
+    
+    
+    <p class="summary">可设置滑动值和水平/垂直方向的Slider控件</p>
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        滑块控制封装文件
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>参数:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>名称</th>
+		
+		
+		<th>类型</th>
+		
+		
+		<th>属性</th>
+		
+		
+		
+		<th>默认</th>
+		
+		
+		<th class="last">描述</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">插件生成容器（节点）</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+            
+            <td class="description last">刻度最小值</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    100
+                
+                </td>
+            
+            
+            <td class="description last">刻度最大值</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>onchange</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">滑动值更改时回调函数</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">版本:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.0.3</li></ul></dd>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <dt class="tag-author">作者:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>susu(744276721@qq.com)</li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>示范:</h5>
+        
+    <pre class="prettyprint"><code>// $PATH为索引路径
+var Slider=require("$PATH/lib/util/slider/slider");
+Slider.init({
+	parent: ".slider",
+	min: 20,
+	max: 200,
+	onChange: function() {
+		console.log(this.value);
+	}
+  });</code></pre>
+
+    <pre class="prettyprint"><code>// 设置滑块位置
+var Slider=require("$PATH/lib/util/slider/slider");
+Slider.setValue(75);</code></pre>
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="ajax.html">ajax</a></li><li><a href="ajaxupload.html">ajaxupload</a></li><li><a href="cookie.html">cookie</a></li><li><a href="copy.html">copy</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="easyPieChart.html">easyPieChart</a></li><li><a href="item.html">item</a></li><li><a href="pager.html">pager</a></li><li><a href="parseTpl.html">parseTpl</a></li><li><a href="slider.html">slider</a></li><li><a href="stringCat.html">stringCat</a></li><li><a href="suggest.html">suggest</a></li><li><a href="tooltip.html">tooltip</a></li><li><a href="validate.html">validate</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    © 2010-2014 tetequ. All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

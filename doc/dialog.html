@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>TNJ-DOC: dialog</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+   <!-- <h1 class="page-title"> dialog</h1>-->
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    dialog
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <!--<h4 class="name" id="dialog"><span class="type-signature"></span>new dialog<span class="signature">(<span class="optional">title</span>, <span class="optional">content</span>, <span class="optional">ok</span>, <span class="optional">okVal</span>, <span class="optional">cancel</span>, <span class="optional">cancelVal</span>, <span class="optional">copy</span>, <span class="optional">copy_target</span>, <span class="optional">width</span>, <span class="optional">height</span>, <span class="optional">drag</span>, <span class="optional">time</span>)</span><span class="type-signature"></span></h4>-->
+    
+    
+    <p class="summary">特殊UI框架能够适应内容变化，甚至连外部程序动态插入的内容它仍然能自适应，因此你不必去考虑消息内容尺寸使用它。它的消息容器甚至能够根据宽度让文本居中或居左对齐——这一切全是XHTML+CSS原生实现</p>
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        dialog插件
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>参数:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>名称</th>
+		
+		
+		<th>类型</th>
+		
+		
+		<th>属性</th>
+		
+		
+		
+		<th>默认</th>
+		
+		
+		<th class="last">描述</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+            
+            <td class="description last">标题内容</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String/Element</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">如果传入的是HTMLElement类型，<br>
+如果是隐藏元素会给其设置display:block以显示该元素，<br>
+其他属性与绑定的事件都会完整保留</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>ok</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">确定按钮回调函数。函数如果返回false将阻止对话框关闭；<br>函数this指针指向内部api；<br>如果传入true表示只显示有关闭功能的按钮</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>okVal</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    确定
+                
+                </td>
+            
+            
+            <td class="description last">"确定按钮"文字</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>cancel</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">取消按钮回调函数。<br>
+			   函数如果返回false将阻止对话框关闭；<br>
+			   函数this指针指向内部api；<br>
+			   如果传入true表示只显示有关闭功能的按钮<br>
+			   对话框标题栏的关闭按钮其实就是取消按钮，<br>只不过视觉不同罢了，点击同样触发cancel事件</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>cancelVal</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    取消
+                
+                </td>
+            
+            
+            <td class="description last">"取消按钮"文字</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>copy</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">复制按钮，复制文字,成功时回调</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>copy_target</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    .textarea
+                
+                </td>
+            
+            
+            <td class="description last">复制目标</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    auto
+                
+                </td>
+            
+            
+            <td class="description last">设置消息内容宽度，可以带单位。一般不需要设置此，对话框框架会自己适应内容。<br>
+				如果设置为百分值单位，将会以根据浏览器可视范围作为基准，<br>此时如果浏览器窗口大小被改变其也会进行相应的调整<br></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    auto
+                
+                </td>
+            
+            
+            <td class="description last">设置消息内容高度，可以带单位。<br>不建议设置此，而应该让内容自己撑开高度。<br>
+				如果设置为百分值单位，将会以根据浏览器可视范围作为基准，<br>此时如果浏览器窗口大小被改变其也会进行相应的调整</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>drag</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolen</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+            
+            <td class="description last">是否允许用户拖动位置</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">设置对话框显示时间。以毫秒为单位</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">版本:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.0.3</li></ul></dd>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <dt class="tag-author">作者:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>susu(744276721@qq.com)</li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>示范:</h5>
+        
+    <pre class="prettyprint"><code>// $PATH为索引路径
+var Pop=require("$PATH/lib/util/dialog/dialog");
+Pop.dialog({
+    title:"这是一个测试",
+    content:$(".con"),
+    ok:function(){
+  		alert();
+  	},
+    drag:true,
+    copy:function(){
+    	this.tip();
+    },
+    copy_target:".con",
+  })</code></pre>
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="ajax.html">ajax</a></li><li><a href="ajaxupload.html">ajaxupload</a></li><li><a href="cookie.html">cookie</a></li><li><a href="copy.html">copy</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="easyPieChart.html">easyPieChart</a></li><li><a href="item.html">item</a></li><li><a href="pager.html">pager</a></li><li><a href="parseTpl.html">parseTpl</a></li><li><a href="slider.html">slider</a></li><li><a href="stringCat.html">stringCat</a></li><li><a href="suggest.html">suggest</a></li><li><a href="tooltip.html">tooltip</a></li><li><a href="validate.html">validate</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    © 2010-2014 tetequ. All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
