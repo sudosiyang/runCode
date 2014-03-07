@@ -2,62 +2,396 @@
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>TNJ-DOC:undefined</title>
-    
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <title>TNJ-DOC: ajax</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css"></head>
 
 <body>
+    <div class="g_top">
+        <div class="page f-cb">
+            <h1 class="logo">
+                <a hidefocus="true" href="#">TEJ</a>
+            </h1>
+            <ul class="m-nav" id="g_nav">
+                <li class="fst">
+                    <span>
+                        <a hidefocus="true" href="../" > <em>首页</em> <sub class="cor">&nbsp;</sub>
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <a hidefocus="true" href="../course/" class="z-slt"> <em>文档</em> <sub class="cor">&nbsp;</sub>
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <a hidefocus="true" href="../download/TNJ-0.8.3.zip">
+                            <em>下载</em>
+                            <sub class="cor">&nbsp;</sub>
+                        </a>
+                    </span>
+                </li>
+                <li class="lst">
+                    <span>
+                        <a hidefocus="true" href="../code" >
+                            <em>代码</em>
+                            <sub class="cor">&nbsp;</sub>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="g_nav" class="m-subnav m-subnav-up">
+        <div class="wrap">
+            <ul class="nav f-cb">
+                <li>
+                    <a hidefocus="true" href="../course" >
+                        <em>规范</em>
+                    </a>
+                </li>
+                <li>
+                    <a hidefocus="true" href="../doc"  class="z-slt">
+                        <em>API</em>
+                    </a>
+                </li>
+                <li>
+                    <a hidefocus="true" href="javascript:alert('即将开放')">
+                        <em>常见问题</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        
 
-<div id="main">
+
+
+<section>
     
-   <!-- <h1 class="page-title"></h1>-->
+<header>
+    <h2>
+    ajax
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <h6>概述</h6>
+    
+    <p class="summary">整合ajax的请求,指定post</p>
+    
+</dt>
+<dd>
+    
+    
+    <h5>作用</h5>
+    <div class="description">
+        ajax请求
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>参数:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>名称</th>
+		
+		
+		<th>类型</th>
+		
+		
+		<th>属性</th>
+		
+		
+		
+		<th>默认</th>
+		
+		
+		<th class="last">描述</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>arg1</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">请求URL</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>arg2</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+            
+            <td class="description last">请求数据{s:"aaa"}</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>arg3</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">上传成功的回调函数</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>arg4</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;任意><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    json
+                
+                </td>
+            
+            
+            <td class="description last">请求返回数据处理方式html,json,text,xml</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">版本:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>4.2.5</li></ul></dd>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <dt class="tag-author">作者:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>susu(744276721@qq.com)</li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
     
     
 
-
     
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+        <h5>示范:</h5>
+        
+    <pre class="prettyprint"><code>// $PATH为索引路径
+var Tool=require("$PATH/lib/base/util");
+Tool.ajax(URL, {s:"sss"},function(data) {
+		alert(data);
+	},"json");</code></pre>
 
     
+</dd>
 
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
 
-
-
-
-
+</section>  
 
 
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="ajax.html">ajax</a></li><li><a href="ajaxupload.html">ajaxupload</a></li><li><a href="cookie.html">cookie</a></li><li><a href="copy.html">copy</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="easyPieChart.html">easyPieChart</a></li><li><a href="item.html">item</a></li><li><a href="pager.html">pager</a></li><li><a href="parseTpl.html">parseTpl</a></li><li><a href="slider.html">slider</a></li><li><a href="stringCat.html">stringCat</a></li><li><a href="suggest.html">suggest</a></li><li><a href="tooltip.html">tooltip</a></li><li><a href="validate.html">validate</a></li></ul>
-</nav>
+    <nav>
+        <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="ajax.html">ajax</a></li><li><a href="ajaxupload.html">ajaxupload</a></li><li><a href="cookie.html">cookie</a></li><li><a href="copy.html">copy</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="easyPieChart.html">easyPieChart</a></li><li><a href="item.html">item</a></li><li><a href="pager.html">pager</a></li><li><a href="parseTpl.html">parseTpl</a></li><li><a href="slider.html">slider</a></li><li><a href="stringCat.html">stringCat</a></li><li><a href="suggest.html">suggest</a></li><li><a href="tooltip.html">tooltip</a></li><li><a href="validate.html">validate</a></li></ul></nav>
 
-<br clear="both">
+    <br clear="both">
 
-<footer>
-    © 2010-2014 tetequ. All Rights Reserved.
-</footer>
+    <div class="g-ft">
+        <div class="g-mt">© 2010-2014 tetequ. All Rights Reserved.</div>
+    </div>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+    <script>prettyPrint(); </script>
+    <script src="scripts/linenumber.js"></script>
 </body>
 </html>
