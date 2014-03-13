@@ -64,5 +64,10 @@ var Data = {
 		html:"<div class='cookie'></div>\n<script src='"+path+"'></script>",
 		css:"",
 		js:'/**\n* cookie创建，获取\n**/\nseajs.use("lib/util/cache/cookie",function(pager){\n  $.cookie("TEJ","easy");\n  $.cookie("TEJ","better",{"expires":1,"path":"/","domain":""});\n  $(".cookie").text($.cookie("TEJ"));\n  /**\n  * cookie删除\n  **/\n  //$.removeCookie("TEJ");\n})\n'
+	},
+	unslider:{
+		html:'<div class="banner">\n		<ul>\n			<li style="background-image: url(img/sunset.jpg);"></li>\n\n			<li style="background-image: url(img/wood.jpg);"></li>\n\n			<li style="background-image: url(img/subway.jpg);"></li>\n\n			<li style="background-image: url(img/shop.jpg);"></li>\n		</ul>\n	</div>\n'+'<script src="'+path+'""></script>',
+		css:"body{\n  margin:0;\n  padding:0;\n}",
+		js:'seajs.use("lib/util/unslider/unslider",function(){\n   $(".banner").unslider({\n      speed: 500,               //  The speed to animate each slide (in milliseconds)\n      delay: 3000,              //  The delay between slide animations (in milliseconds)\n      complete: function() {},  //  A function that gets called after every slide animation\n      keys: true,               //  Enable keyboard (left, right) arrow shortcuts\n      dots: true,               //  Display dot navigation\n      fluid: false              //  Support responsive design. May break non-responsive designs\n  });\n})'
 	}
 }
