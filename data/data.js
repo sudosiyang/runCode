@@ -68,6 +68,6 @@ var Data = {
 	unslider:{
 		html:'<div class="banner">\n		<ul>\n			<li style="background-image: url(img/sunset.jpg);"></li>\n\n			<li style="background-image: url(img/wood.jpg);"></li>\n\n			<li style="background-image: url(img/subway.jpg);"></li>\n\n			<li style="background-image: url(img/shop.jpg);"></li>\n		</ul>\n	</div>\n'+'<script src="'+path+'""></script>',
 		css:"body{\n  margin:0;\n  padding:0;\n}",
-		js:'seajs.use("lib/util/unslider/unslider",function(){\n   $(".banner").unslider({\n      speed: 500,               //  The speed to animate each slide (in milliseconds)\n      delay: 3000,              //  The delay between slide animations (in milliseconds)\n      complete: function() {},  //  A function that gets called after every slide animation\n      keys: true,               //  Enable keyboard (left, right) arrow shortcuts\n      dots: true,               //  Display dot navigation\n      fluid: false              //  Support responsive design. May break non-responsive designs\n  });\n})'
+		js:'seajs.use("lib/util/unslider/unslider",function(){\n   $(".banner").unslider({\n      speed: 500,               //  动效执行时间\n      delay: 3000,              // 轮询时间 \n      complete: function() {},  //  每次滑动特效后执行函数\n      keys: true,               //  支持左右按键\n      dots: true,               //  点导航\n      fluid: true              //  是否支持响应式网页\n  });\n})'
 	}
 }
