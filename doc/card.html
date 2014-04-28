@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>TNJ-DOC: parseTpl</title>
+    <title>TNJ-DOC: card</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -80,7 +80,7 @@
     
 <header>
     <h2>
-    parseTpl
+    card
     </h2>
     
 </header>  
@@ -94,9 +94,7 @@
 <dt>
     <h6>概述</h6>
     
-    <p class="summary">解析模版tpl。当data未传入时返回编译结果函数；
-当某个template需要多次解析时，建议保存编译结果函数，
-然后调用此函数来得到结果</p>
+    <p class="summary">js实现的下拉列表，来实现跨浏览器的自定义效果</p>
     
 </dt>
 <dd>
@@ -104,7 +102,7 @@
     
     <h5>作用</h5>
     <div class="description">
-        对象模板渲染
+        表单验证
     </div>
     
 
@@ -113,99 +111,6 @@
     
     
     
-        <h5>参数:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>名称</th>
-		
-		
-		<th>类型</th>
-		
-		
-		<th>属性</th>
-		
-		
-		
-		
-		<th class="last">描述</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>arg1</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;任意><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">模板字符串</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>arg2</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;任意><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">数据源</td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
     
     
 <dl class="details">
@@ -213,7 +118,7 @@
         
     
     <dt class="tag-version">版本:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>4.2.5</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>1.0.3</li></ul></dd>
     
     
     
@@ -255,37 +160,26 @@
     
     
     
-    <h5>返回值:</h5>
-    
-            
-<div class="param-desc">
-    渲染好的模板
-</div>
-
-
-
-<dl>
-	<dt>
-		类型:
-	</dt>
-	<dd>
-		
-<span class="param-type">String</span>
-
-
-	</dd>
-</dl>
-
-        
     
     
         <h5>示范:</h5>
         
-    <pre class="prettyprint"><code>// $PATH为索引路径
-var Tool=require("$PATH/lib/base/util");
-var str = "&lt;p>房间名称：&lt;%=name%>&lt;/br>房间人数：&lt;%=num%>&lt;/p>";
-  var obj = {num:"234",name: "hello"};
-  var value=util.parseTpl(str,obj);</code></pre>
+    <pre class="prettyprint"><code>//js示例:
+// $PATH为索引路径
+var card=require("$PATH/lib/util/card/card");
+ card.init({
+    target: ".card",
+    tip:"选择对应课程",
+    onChange: function() {
+    console.log(this.value);
+  }
+  });</code></pre>
+
+    <pre class="prettyprint"><code>//HTML示例:
+//在HTML中的属性
+
+  //@data-source 数据源
+&lt;div class='card' data-source='{"托福":1,"雅思":12,"六级":3,"四级":5,"考研英语":7}'>&lt;/div></code></pre>
 
     
 </dd>
