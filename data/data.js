@@ -69,5 +69,10 @@ var Data = {
 		html:'<div class="banner">\n		<ul>\n			<li style="background-image: url(img/sunset.jpg);"></li>\n\n			<li style="background-image: url(img/wood.jpg);"></li>\n\n			<li style="background-image: url(img/subway.jpg);"></li>\n\n			<li style="background-image: url(img/shop.jpg);"></li>\n		</ul>\n	</div>\n'+'<script src="'+path+'""></script>',
 		css:"body{\n  margin:0;\n  padding:0;\n}",
 		js:'seajs.use("lib/util/unslider/unslider",function(){\n   $(".banner").unslider({\n      speed: 500,               //  动效执行时间\n      delay: 3000,              // 轮询时间 \n      complete: function() {},  //  每次滑动特效后执行函数\n      keys: true,               //  支持左右按键\n      dots: true,               //  点导航\n      fluid: true              //  是否支持响应式网页\n  });\n})'
+	},
+	card:{
+		html:"<div class='card' data-source='{\"托福\":1,\"雅思\":12,\"六级\":3,\"四级\":5,\"考研英语\":7}'></div>\n<script src='"+path+"'></script>",
+		css:".card{\n	margin:100px;\n	width:120px;\n 	border:1px solid #ccc;\n}",
+		js:'/**\n* @target 插件容器\n* @tip 提示\n* @onChange 选择-value改变时触发\n\n* setIndex 重设选择项函数\n**/\n\nseajs.use("lib/util/card/card",function(card){\n  card.init({\n	target: ".card",\n	tip:"选择对应课程",\n	onChange: function() {\n		console.log(this.value);\n	}\n  });\n  //card.setIndex(2);\n})'
 	}
 }
